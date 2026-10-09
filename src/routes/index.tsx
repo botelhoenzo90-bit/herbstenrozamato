@@ -213,40 +213,52 @@ function Index() {
           <div className="clinic-copy">
             <span className="eyebrow">CONHEÇA A TRAJETÓRIA</span>
             <h2>Um pouco sobre Herbsten e <em>seu trabalho.</em></h2>
-            <p>Neste espaço, você poderá conhecer o profissional, sua formação e ouvir explicações sobre as abordagens utilizadas nos atendimentos.</p>
-            <p>Use as setas do carrossel para navegar entre a foto profissional, o registro da formatura e dois vídeos explicativos. Os espaços dos vídeos podem receber os arquivos finais quando estiverem disponíveis.</p>
+            <p>Neste carrossel, você poderá conhecer a trajetória profissional e encontrar explicações sobre o atendimento e as abordagens utilizadas.</p>
+            <p>Por enquanto, os quatro cartões ficam apenas com texto. Depois, podemos adicionar a foto profissional, o registro da formatura e os dois vídeos explicativos.</p>
             <div className="clinic-highlights">
               <div><UserRound size={18}/><span><strong>Apresentação</strong>Conheça o profissional.</span></div>
-              <div><Check size={18}/><span><strong>Formação</strong>Um registro da trajetória acadêmica.</span></div>
-              <div><Video size={18}/><span><strong>Vídeos explicativos</strong>Entenda as abordagens e o processo.</span></div>
+              <div><Check size={18}/><span><strong>Formação</strong>Conheça sua trajetória acadêmica.</span></div>
+              <div><Video size={18}/><span><strong>Vídeos explicativos</strong>Entenda o processo e as abordagens.</span></div>
             </div>
             <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de saber mais sobre o seu trabalho e os atendimentos.")}>Conversar com Herbsten <ArrowRight size={18}/></Button>
           </div>
           <Carousel className="clinic-gallery" opts={{ loop: true }} aria-label="Carrossel de apresentação, formação e vídeos explicativos">
             <CarouselContent>
               <CarouselItem>
-                <figure className="clinic-slide presentation-slide">
-                  <img src={portrait.url} alt="Foto profissional de Herbsten" loading="lazy"/>
-                  <figcaption><strong>Conheça Herbsten</strong><span>Apresentação profissional</span></figcaption>
-                </figure>
+                <article className="presentation-text-card">
+                  <span className="presentation-card-number">01 / 04</span>
+                  <UserRound size={34}/>
+                  <span className="eyebrow">APRESENTAÇÃO</span>
+                  <h3>Conheça Herbsten</h3>
+                  <p>Um pouco sobre o profissional, sua trajetória e a proposta de atendimento.</p>
+                </article>
               </CarouselItem>
               <CarouselItem>
-                <figure className="clinic-slide presentation-slide graduation-placeholder">
-                  <div className="presentation-placeholder"><Check size={34}/><strong>Foto da formatura</strong><span>Inserir aqui a foto real da formatura de Herbsten.</span></div>
-                  <figcaption><strong>Trajetória e formação</strong><span>Registro da formatura</span></figcaption>
-                </figure>
+                <article className="presentation-text-card">
+                  <span className="presentation-card-number">02 / 04</span>
+                  <Check size={34}/>
+                  <span className="eyebrow">FORMAÇÃO</span>
+                  <h3>Trajetória e formatura</h3>
+                  <p>Conheça a formação e o percurso profissional de Herbsten Rozamato Sousa.</p>
+                </article>
               </CarouselItem>
               <CarouselItem>
-                <div className="clinic-slide presentation-slide video-carousel-card">
-                  <div className="presentation-placeholder"><Video size={36}/><strong>Vídeo 1 — Como funciona o atendimento</strong><span>Espaço reservado para o vídeo explicativo sobre o processo de atendimento.</span></div>
-                  <div className="presentation-caption"><strong>Como funciona o atendimento</strong><span>Uma explicação sobre as etapas e o primeiro contato.</span></div>
-                </div>
+                <article className="presentation-text-card">
+                  <span className="presentation-card-number">03 / 04</span>
+                  <Video size={34}/>
+                  <span className="eyebrow">VÍDEO EXPLICATIVO 1</span>
+                  <h3>Como funciona o atendimento</h3>
+                  <p>Um vídeo para explicar o primeiro contato e as etapas do atendimento.</p>
+                </article>
               </CarouselItem>
               <CarouselItem>
-                <div className="clinic-slide presentation-slide video-carousel-card">
-                  <div className="presentation-placeholder"><Video size={36}/><strong>Vídeo 2 — Conheça as abordagens</strong><span>Espaço reservado para o segundo vídeo explicativo.</span></div>
-                  <div className="presentation-caption"><strong>Conheça as abordagens</strong><span>Uma apresentação sobre as técnicas e suas características.</span></div>
-                </div>
+                <article className="presentation-text-card">
+                  <span className="presentation-card-number">04 / 04</span>
+                  <Video size={34}/>
+                  <span className="eyebrow">VÍDEO EXPLICATIVO 2</span>
+                  <h3>Conheça as abordagens</h3>
+                  <p>Uma apresentação sobre as abordagens utilizadas e suas características.</p>
+                </article>
               </CarouselItem>
             </CarouselContent>
             <CarouselPrevious variant="siteGold" className="clinic-arrow clinic-arrow-prev" aria-label="Conteúdo anterior" title="Conteúdo anterior"/>
