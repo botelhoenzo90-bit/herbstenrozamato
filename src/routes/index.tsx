@@ -107,10 +107,10 @@ const issueImages = [
 ];
 
 const reviews = [
-  { name: "Depoimento real", text: "Este espaço fica reservado para inserir uma avaliação verdadeira, autorizada pelo cliente." },
-  { name: "Depoimento real", text: "Adicione aqui um relato autêntico sobre a experiência de atendimento, com autorização." },
-  { name: "Depoimento real", text: "Use este cartão para publicar uma avaliação real, sem alterar o sentido do depoimento." },
-  { name: "Depoimento real", text: "Espaço reservado para uma avaliação autorizada de quem já realizou atendimento." },
+  { name: "Mariana Costa", text: "Gostei de poder conversar com calma e sem sentir que precisava ter todas as respostas. A escuta me ajudou a organizar melhor algumas questões que eu vinha adiando." },
+  { name: "Rafael Martins", text: "O primeiro contato foi tranquilo. Consegui tirar minhas dúvidas sobre como funciona o atendimento e entender melhor o que esperar do processo." },
+  { name: "Camila Oliveira", text: "Achei importante ter espaço para falar no meu ritmo. A conversa trouxe perguntas que me fizeram olhar para algumas situações por outro ângulo." },
+  { name: "André Ferreira", text: "A explicação sobre as abordagens foi clara e respeitosa. Foi bom poder conversar sobre minhas expectativas antes de decidir os próximos passos." },
 ];
 
 const faq = [
@@ -328,7 +328,8 @@ function Index() {
       <section className="section reviews">
         <div className="container reviews-container">
           <div className="section-heading center"><span className="eyebrow">AVALIAÇÕES</span><h2>Um atendimento começa com escuta, informação e <em>clareza.</em></h2><p>Conheça as modalidades e tire suas dúvidas antes de marcar uma conversa.</p></div>
-          <div className="review-window"><div className="review-track">{[0,1].map(copy => <div className="conveyor-group" aria-hidden={copy === 1 ? true : undefined} key={copy}>{reviews.map(({name,text})=><article className="review-card" key={name}><div className="review-stars" aria-label="Cinco estrelas ilustrativas">{[0,1,2,3,4].map(star=><Star key={star} size={18}/>)}</div><p>{text}</p><div className="review-person"><div className="review-avatar"><UserRound size={24}/></div><div className="review-person-info"><h3>{name}</h3><span>Espaço para avaliação real</span></div></div></article>)}</div>)}</div></div>
+          <div className="review-window"><div className="review-track">{[0,1].map(copy => <div className="conveyor-group" aria-hidden={copy === 1 ? true : undefined} key={copy}>{reviews.map(({name,text})=><article className="review-card" key={name}><div className="review-stars" aria-label="Estrelas decorativas de demonstração">{[0,1,2,3,4].map(star=><Star key={star} size={18}/>)}</div><p>{text}</p><div className="review-person"><div className="review-avatar"><UserRound size={24}/></div><div className="review-person-info"><h3>{name{"}"}</h3><span>Exemplo fictício</span></div></div></article>)}</div>)}</div></div>
+          <p className="reviews-disclaimer">Depoimentos e nomes fictícios, criados apenas para demonstração do layout. Não representam avaliações reais de clientes.</p>
           <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero conversar sobre um atendimento.")}>Agendar atendimento <MessageCircle size={18}/></Button></div>
         </div>
       </section>
