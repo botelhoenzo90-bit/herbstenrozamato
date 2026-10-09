@@ -21,7 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { clinicAddress, getClinicMapUrl } from "@/lib/clinic-location";
 import portrait from "@/assets/idalecia-retrato.png.asset.json";
-import office from "@/assets/herbsten-consultorio.png.asset.json";
+import office from "@/assets/idalecia-consultorio.png.asset.json";
 import clinic from "@/assets/clinica-fachada.png.asset.json";
 import whatsappIcon from "@/assets/whatsapp.png.asset.json";
 import depression from "@/assets/depressao.webp.asset.json";
