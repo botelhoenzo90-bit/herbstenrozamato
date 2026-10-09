@@ -168,3 +168,12 @@ footer .footer-bottom{border-color:#476b56!important}
 .trajectory-video-frame video,.process-video-frame video{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;background:transparent!important;border:0;border-radius:0;box-shadow:none}
 .process-video-block{border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;padding:0}
 @media(max-width:760px){.trajectory-video-frame video{aspect-ratio:auto;max-height:none}}
+
+
+/* Redução sutil do tamanho dos vídeos */
+.trajectory-video-frame{width:min(100%,780px)}
+.process-video-frame{width:min(100%,88%);margin-inline:auto}
+@media(max-width:760px){
+  .trajectory-video-frame{width:min(100%,560px)}
+  .process-video-frame{width:min(100%,94%)}
+}
