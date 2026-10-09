@@ -212,3 +212,8 @@ footer .footer-bottom{border-color:#476b56!important}
   .process-video-frame{width:100%}
 }
 
+/* Vídeo ASSISTA TAMBÉM um pouco menor em telas mobile */
+@media(max-width:760px){
+  .process-video-frame{width: min(100%, 88%)}
+}
+
