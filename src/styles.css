@@ -181,3 +181,7 @@ footer .footer-bottom{border-color:#476b56!important}
 
 /* Logomarca do rodapé em branco para contraste com o fundo verde */
 .footer-brand-logo{filter:brightness(0) invert(1)}
+
+
+/* Aviso visível para os exemplos fictícios da seção de avaliações */
+.reviews-disclaimer{max-width:720px;margin:18px auto 28px;text-align:center;font-size:12px;line-height:1.65;color:var(--muted-foreground)}
