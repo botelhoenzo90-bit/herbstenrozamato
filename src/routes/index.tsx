@@ -170,7 +170,7 @@ function Index() {
           <div className="issue-window"><div className="issue-track">
             {[0, 1].map(copy => <div className="conveyor-group" aria-hidden={copy === 1 ? true : undefined} key={copy}>
               {issues.map(([title,text], i) => <article className="issue-card" key={title}>
-                <img className="issue-image" src={issueImages[i]?.url} alt={copy === 0 ? title : ""} loading="lazy"/>
+                
                 <div className="issue-body"><h3>{title}</h3><p>{text}</p></div>
               </article>)}
             </div>)}
