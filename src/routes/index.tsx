@@ -195,78 +195,29 @@ function Index() {
           </div>
           <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de informações sobre os atendimentos.")}>Agendar conversa <MessageCircle size={18}/></Button></div>
         </div>
+          <div className="process-video-block">
+            <div className="process-video-copy">
+              <span className="eyebrow">ASSISTA TAMBÉM</span>
+              <h3>Entenda o processo de forma visual.</h3>
+              <p>Um vídeo ilustrativo para acompanhar a explicação sobre o funcionamento do processo e a relação entre pensamentos e emoções.</p>
+            </div>
+            <div className="process-video-frame">
+              <video controls preload="metadata" playsInline src={approachVideoUrl} aria-label="Vídeo ilustrativo dos dois cérebros conversando">
+                Seu navegador não consegue reproduzir este vídeo.
+              </video>
+            </div>
+          </div>
       </section>
 
       <section className="section clinic-story" id="apresentacao">
-        <div className="container clinic-story-grid">
-          <div className="clinic-copy">
+        <div className="container">
+          <div className="section-heading center">
             <span className="eyebrow">CONHEÇA A TRAJETÓRIA</span>
-            <h2>Um pouco sobre Herbsten e <em>seu trabalho.</em></h2>
-            <p>Neste carrossel, você poderá conhecer a trajetória profissional e encontrar explicações sobre o atendimento e as abordagens utilizadas.</p>
-            <p>Conheça a trajetória de Herbsten, sua formação pelo Instituto de Psicanálise — IAPB e as abordagens que apresenta em seus atendimentos.</p>
-            <div className="clinic-highlights">
-              <div><UserRound size={18}/><span><strong>Apresentação</strong>Conheça o profissional.</span></div>
-              <div><Check size={18}/><span><strong>Formação</strong>Conheça sua trajetória acadêmica.</span></div>
-              <div><Video size={18}/><span><strong>Vídeos explicativos</strong>Entenda o processo e as abordagens.</span></div>
-            </div>
-            <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de saber mais sobre o seu trabalho e os atendimentos.")}>Conversar com Herbsten <ArrowRight size={18}/></Button>
+            <h2>Conheça Herbsten <em>pela sua própria apresentação.</em></h2>
+            <p>Assista ao vídeo em que Herbsten apresenta seu trabalho e compartilha sua proposta de atendimento.</p>
           </div>
-          <Carousel className="clinic-gallery" opts={{ loop: true }} aria-label="Carrossel de apresentação, formação e vídeos explicativos">
-            <CarouselContent>
-              <CarouselItem>
-                <article className="presentation-text-card presentation-media-card">
-                  <img src={portraitUrl} alt="Retrato profissional de Herbsten Rozamato Sousa" loading="lazy"/>
-                  <span className="presentation-card-number">01 / 04</span>
-                  <span className="eyebrow">APRESENTAÇÃO</span>
-                  <h3>Conheça Herbsten</h3>
-                  <p>Um pouco sobre o profissional, sua trajetória e a proposta de atendimento.</p>
-                </article>
-              </CarouselItem>
-              <CarouselItem>
-                <article className="presentation-text-card presentation-media-card">
-                  <img src={graduationUrl} alt="Registro da formatura de Herbsten no Instituto de Psicanálise — IAPB" loading="lazy"/>
-                  <span className="presentation-card-number">02 / 04</span>
-                  <span className="eyebrow">FORMAÇÃO</span>
-                  <h3>Trajetória e formatura</h3>
-                  <p>Formação em Psicanálise pelo Instituto de Psicanálise — IAPB, em 2018.</p>
-                </article>
-              </CarouselItem>
-              <CarouselItem>
-                <article className="presentation-text-card presentation-video-card">
-                  <video controls preload="metadata" playsInline src={presentationVideoUrl} aria-label="Vídeo de apresentação de Herbsten"/>
-                  <span className="presentation-card-number">03 / 04</span>
-                  <span className="eyebrow">VÍDEO EXPLICATIVO 1</span>
-                  <h3>Como funciona o atendimento</h3>
-                  <p>Conheça a proposta de atendimento e saiba como fazer o primeiro contato.</p>
-                </article>
-              </CarouselItem>
-              <CarouselItem>
-                <article className="presentation-text-card presentation-video-card">
-                  <video controls preload="metadata" playsInline src={approachVideoUrl} aria-label="Vídeo sobre as abordagens de atendimento"/>
-                  <span className="presentation-card-number">04 / 04</span>
-                  <span className="eyebrow">VÍDEO EXPLICATIVO 2</span>
-                  <h3>Conheça as abordagens</h3>
-                  <p>Uma apresentação sobre as abordagens utilizadas e suas características.</p>
-                </article>
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious variant="siteGold" className="clinic-arrow clinic-arrow-prev" aria-label="Conteúdo anterior" title="Conteúdo anterior"/>
-            <CarouselNext variant="siteGold" className="clinic-arrow clinic-arrow-next" aria-label="Próximo conteúdo" title="Próximo conteúdo"/>
-          </Carousel>
-        </div>
-      </section>
-
-
-      <section className="section video-section" id="video">
-        <div className="container video-section-grid">
-          <div className="video-copy">
-            <span className="eyebrow">CONHEÇA O HERBSTEN</span>
-            <h2>Conheça a proposta de atendimento e <em>as abordagens.</em></h2>
-            <p>Assista à apresentação do profissional e conheça as abordagens, a formação e as modalidades de atendimento.</p>
-            <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de conhecer melhor o seu atendimento.")}>Quero conhecer as abordagens <ArrowRight size={18}/></Button>
-          </div>
-          <div className="video-frame">
-            <video controls preload="metadata" playsInline src={presentationVideoUrl}>
+          <div className="trajectory-video-frame">
+            <video controls preload="metadata" playsInline src={presentationVideoUrl} aria-label="Herbsten apresenta seu trabalho">
               Seu navegador não consegue reproduzir este vídeo.
             </video>
           </div>
@@ -280,17 +231,7 @@ function Index() {
           <p>A vivência parte de uma situação que a pessoa deseja compreender, trabalhar ou modificar e dura aproximadamente uma hora, conforme as informações fornecidas pelo profissional.</p>
           <p className="note">As descrições desta técnica não representam garantia de resultado nem substituem diagnóstico, tratamento médico ou acompanhamento psicológico quando necessários.</p>
           <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero entender como funciona uma vivência de Energy Healing®.")}>Tirar dúvidas sobre Energy Healing® <ArrowRight size={18}/></Button></div>
-          <div className="specialty-quote"><Sparkles size={32}/><p>“Suas crenças influenciam a forma como você interpreta experiências e possibilidades.”</p></div>
-        </div>
-      </section>
-
-      <section className="section" id="crencas">
-        <div className="container narrow center">
-          <span className="eyebrow">SUAS CRENÇAS E SUA REALIDADE</span>
-          <h2>Perceber padrões é um convite a <em>novas perspectivas.</em></h2>
-          <p>Experiências de vida, aprendizados e crenças podem influenciar decisões, hábitos e relacionamentos. Observar como esses padrões aparecem no cotidiano pode ajudar a ampliar o autoconhecimento e a considerar outras formas de agir.</p>
-          <p>Cada pessoa tem uma história própria. Por isso, o atendimento deve respeitar a individualidade e evitar fórmulas prontas ou promessas de transformação instantânea.</p>
-          <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de conversar sobre autoconhecimento e atendimento.")}>Conversar com Herbsten <MessageCircle size={18}/></Button>
+          <div className="specialty-quote"><Sparkles size={32}/><p>Um espaço para conhecer a abordagem, esclarecer dúvidas e conversar sobre expectativas realistas.</p></div>
         </div>
       </section>
 
