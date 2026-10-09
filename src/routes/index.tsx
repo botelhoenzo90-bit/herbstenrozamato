@@ -207,6 +207,7 @@ function Index() {
                 Seu navegador não consegue reproduzir este vídeo.
               </video>
             </div>
+            <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de entender melhor como funciona o processo de atendimento.")}>Quero entender melhor <ArrowRight size={18}/></Button></div>
           </div>
       </section>
 
@@ -222,6 +223,7 @@ function Index() {
               Seu navegador não consegue reproduzir este vídeo.
             </video>
           </div>
+          <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Assisti à sua apresentação e gostaria de saber mais sobre os atendimentos.")}>Conversar sobre o atendimento <MessageCircle size={18}/></Button></div>
         </div>
       </section>
 
@@ -252,6 +254,7 @@ function Index() {
           <div className="benefit-grid">
             {[["Psicanálise clínica","Espaço de investigação da história pessoal, dos conflitos, dos sentimentos e dos padrões que se repetem."],["Hipnoterapia clínica","A hipnoterapia utiliza técnicas de hipnose em contexto terapêutico. Converse sobre o método, a formação e a adequação ao seu caso."],["Programação Neurolinguística (PNL)","PNL significa Programação Neurolinguística. O material apresentado a relaciona à linguagem, aos padrões de pensamento e comportamento, comunicação, gestão do estresse e definição de metas."],["Energy Healing®","Prática descrita pelo profissional como direcionada a crenças e conteúdos do subconsciente. Conheça os limites e expectativas realistas."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
           </div>
+          <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de conversar sobre as abordagens profissionais e tirar algumas dúvidas.")}>Tirar dúvidas sobre as abordagens <MessageCircle size={18}/></Button></div>
         </div>
       </section>
 
