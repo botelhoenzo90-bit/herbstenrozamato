@@ -133,6 +133,7 @@ function Index() {
       <section className="hero" id="inicio">
         <div className="container hero-grid">
           <div className="hero-copy">
+            <img className="brand-logo hero-brand-logo" src="/midia/Logo%20Rozamato%20Psicanalista%20em%20Verde%20Floresta.png" alt="Logo Rozamato Psicanalista" />
             <h1>Herbsten <em>Rozamato Sousa</em></h1>
             <p className="hero-title">Graduado em História · Psicanalista Clínico · Practitioner em PNL · Hipnoterapeuta Clínico · Energy Healing®</p>
             <p className="hero-statement">Conheça sua história com mais profundidade e explore os padrões que influenciam suas escolhas, seus relacionamentos e a maneira como você se percebe.</p>
@@ -349,7 +350,7 @@ function Index() {
         <div className="container center"><span className="eyebrow">SEU PROCESSO COMEÇA COM UMA CONVERSA</span><h2>Comece com uma conversa. <em>Conheça as possibilidades.</em></h2><p>Converse com o Herbsten, explique o que você está vivendo e descubra como funciona o atendimento.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero dar o primeiro passo e conhecer a Psicanálise.")}>Quero conversar com o Herbsten <ArrowRight size={19}/></Button></div>
       </section>
 
-      <footer><div className="container footer-grid"><div><div className="brand footer-brand">Herbsten <span>Rozamato Sousa</span></div><p>Psicanalista Clínico · Practitioner em PNL<br/>Hipnoterapeuta · Energy Healing®</p></div><div><strong>Atendimento</strong><span>Online e presencial</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de informações sobre atendimento online e presencial.")}><MessageCircle size={16}/> WhatsApp</Button><a href="#inicio"><Instagram size={16}/> Instagram</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Herbsten Rozamato Sousa. Todos os direitos reservados.</div></footer>
+      <footer><div className="container footer-grid"><div><img className="brand-logo footer-brand-logo" src="/midia/Logo%20Rozamato%20Psicanalista%20em%20Verde%20Floresta.png" alt="Logo Rozamato Psicanalista" loading="lazy" /><p>Psicanalista Clínico · Practitioner em PNL<br/>Hipnoterapeuta · Energy Healing®</p></div><div><strong>Atendimento</strong><span>Online e presencial</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de informações sobre atendimento online e presencial.")}><MessageCircle size={16}/> WhatsApp</Button><a href="#inicio"><Instagram size={16}/> Instagram</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Herbsten Rozamato Sousa. Todos os direitos reservados.</div></footer>
 
       <Button variant="whatsapp" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de saber mais sobre Psicanálise e as abordagens.")} aria-label="Falar no WhatsApp"><img src={whatsappIcon.url} alt=""/></Button>
     </main>
