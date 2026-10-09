@@ -202,7 +202,7 @@ function Index() {
               <p>Um vídeo ilustrativo para acompanhar a explicação sobre o funcionamento do processo e a relação entre pensamentos e emoções.</p>
             </div>
             <div className="process-video-frame">
-              <video controls preload="metadata" playsInline src={approachVideoUrl} aria-label="Vídeo ilustrativo dos dois cérebros conversando">
+              <video controls preload="metadata" playsInline src={presentationVideoUrl} aria-label="Vídeo ilustrativo dos dois cérebros conversando">
                 Seu navegador não consegue reproduzir este vídeo.
               </video>
             </div>
@@ -217,7 +217,7 @@ function Index() {
             <p>Assista ao vídeo em que Herbsten apresenta seu trabalho e compartilha sua proposta de atendimento.</p>
           </div>
           <div className="trajectory-video-frame">
-            <video controls preload="metadata" playsInline src={presentationVideoUrl} aria-label="Herbsten apresenta seu trabalho">
+            <video controls preload="metadata" playsInline src={approachVideoUrl} aria-label="Herbsten apresenta seu trabalho">
               Seu navegador não consegue reproduzir este vídeo.
             </video>
           </div>
