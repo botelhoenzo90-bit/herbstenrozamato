@@ -12,8 +12,8 @@ export const Route=createRootRouteWithContext<{queryClient:QueryClient}>()({
  staticData: { sitemap: false },
  head:()=>({meta:[
   {charSet:"utf-8"},{name:"viewport",content:"width=device-width, initial-scale=1"},
-  {name:"author",content:"Idalécia da Guia"},
-  {property:"og:site_name",content:"Idalécia da Guia — Terapeuta TRG"}
+  {name:"author",content:"Herbsten Rozamato Sousa"},
+  {property:"og:site_name",content:"Herbsten Rozamato Sousa — Psicanálise e Terapias"}
  ],links:[{rel:"stylesheet",href:appCss},{rel:"icon",href:"/favicon.png",type:"image/png"}]}),
  shellComponent:RootShell,component:RootComponent,notFoundComponent:NotFoundComponent,errorComponent:ErrorComponent
 });
