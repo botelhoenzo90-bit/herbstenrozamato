@@ -220,7 +220,7 @@ function Index() {
             <p>Assista ao vídeo em que Herbsten apresenta seu trabalho e compartilha sua proposta de atendimento.</p>
           </div>
           <div className="trajectory-video-frame">
-            <video controls preload="metadata" playsInline src={approachVideoUrl} aria-label="Herbsten apresenta seu trabalho">
+            <video controls preload="metadata" playsInline src={approachVideoUrl + "#t=1"} aria-label="Herbsten apresenta seu trabalho">
               Seu navegador não consegue reproduzir este vídeo.
             </video>
           </div>
