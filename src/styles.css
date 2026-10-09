@@ -177,3 +177,7 @@ footer .footer-bottom{border-color:#476b56!important}
   .trajectory-video-frame{width:min(100%,560px)}
   .process-video-frame{width:min(100%,94%)}
 }
+
+
+/* Logomarca do rodapé em branco para contraste com o fundo verde */
+.footer-brand-logo{filter:brightness(0) invert(1)}
