@@ -44,10 +44,10 @@ export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Herbsten Rozamato Sousa | Psicanálise e Terapias em Fortaleza, CE e online" },
-      { name: "description", content: "Psicanálise e Terapias com Herbsten Rozamato Sousa em Fortaleza, CE e online. Atendimento individual para ansiedade, traumas e questões emocionais. Consulte horários." },
-      { property: "og:title", content: "Herbsten Rozamato Sousa | Psicanálise e Terapias em Fortaleza, CE e online" },
-      { property: "og:description", content: "Conheço Herbsten Rozamato Sousa, Psicanalista Clínico • Hipnoterapeuta. Atendimento online e presencial em Fortaleza, CE, com escuta individualizada e acolhimento." },
+      { title: "Herbsten Rozamato Sousa | Psicanálise em Fortaleza, CE e online" },
+      { name: "description", content: "Psicanálise com Herbsten Rozamato Sousa em Fortaleza, CE e online. Atendimento individual para ansiedade, traumas e questões emocionais. Consulte horários." },
+      { property: "og:title", content: "Herbsten Rozamato Sousa | Psicanálise em Fortaleza, CE e online" },
+      { property: "og:description", content: "Conheça Herbsten Rozamato Sousa, psicanalista, Practitioner em PNL e hipnoterapeuta clínico. Atendimento online e presencial em Fortaleza, CE, com escuta individualizada e acolhimento." },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { name: "google-site-verification", content: "9myn0HdI7aGpUZnVvPyhIOqrxVOLgTJA9XtYO1VNmew" },
       { property: "og:locale", content: "pt_BR" },
@@ -91,16 +91,16 @@ const clinicMapUrl = getClinicMapUrl(mapsBrowserKey);
 const clinicVideoUrl = herbstenVideo.url;
 
 const issues = [
-  ["Crenças limitantes", "Explore crenças e padrões que podem influenciar suas escolhas e sua forma de ver o mundo."],
-  ["Ansiedade e preocupações", "Um espaço para compreender emoções e buscar formas de lidar com momentos difíceis."],
-  ["Medos e fobias", "Explore experiências e reações que podem limitar sua rotina, respeitando seu tempo."],
-  ["Bloqueios emocionais", "Converse sobre padrões e sentimentos que parecem dificultar seus próximos passos."],
-  ["Traumas e experiências marcantes", "Olhe para experiências difíceis com respeito à sua história e aos seus limites."],
-  ["Autoestima e insegurança", "Reflita sobre a forma como você se percebe e se relaciona consigo e com os outros."],
-  ["Procrastinação", "Investigue fatores que podem influenciar suas decisões, seus hábitos e sua rotina."],
-  ["Relacionamentos", "Compreenda padrões, conflitos, limites e necessidades nas relações."],
-  ["Compulsão alimentar", "Converse sobre comportamentos que causam preocupação e as emoções associadas a eles."],
-  ["Prosperidade e objetivos", "Reflita sobre crenças, expectativas e padrões que influenciam suas escolhas."],
+  ["Crenças limitantes", "Reconheça ideias aprendidas ao longo da vida e observe como elas podem participar das suas decisões e relações."],
+  ["Ansiedade e preocupações", "Investigue suas preocupações com cuidado e desenvolva mais clareza sobre o que acontece no seu dia a dia."],
+  ["Medos e fobias", "Compreenda como medos e reações aparecem na sua rotina, no seu ritmo e sem julgamentos."],
+  ["Bloqueios emocionais", "Dê nome ao que sente e explore os padrões que parecem se repetir, com espaço para novas perspectivas."],
+  ["Traumas e experiências marcantes", "Fale sobre experiências marcantes com respeito à sua história, aos seus limites e ao seu tempo."],
+  ["Autoestima e insegurança", "Explore a imagem que construiu de si e como ela influencia sua segurança e seus relacionamentos."],
+  ["Procrastinação", "Observe os hábitos e as dificuldades que atrapalham seus planos e identifique o que merece atenção."],
+  ["Relacionamentos", "Entenda dinâmicas de relacionamento, comunicação, limites e necessidades emocionais."],
+  ["Compulsão alimentar", "Explore com responsabilidade a relação entre emoções, hábitos e comportamento alimentar."],
+  ["Prosperidade e objetivos", "Reflita sobre objetivos, expectativas e crenças pessoais sem promessas de ganhos ou resultados garantidos."],
 ];
 
 const issueImages = [
@@ -124,7 +124,7 @@ const reviews = [
 ];
 
 const faq = [
-  ["O que é a Psicanálise e Terapias?", "A psicanálise busca compreender sentimentos, conflitos e padrões a partir da história singular de cada pessoa. A abordagem e os objetivos devem ser conversados diretamente com o profissional."],
+  ["O que é a Psicanálise?", "A psicanálise oferece um espaço de escuta e investigação da história pessoal, dos conflitos e dos sentimentos. O percurso é singular e construído a partir das questões trazidas por cada pessoa."],
   ["O atendimento pode ser online?", "Sim. Há atendimento online e presencial em Fortaleza, Ceará. Consulte disponibilidade e horários pelo WhatsApp."],
   ["Quanto tempo dura uma vivência de Energy Healing®?", "Conforme as informações fornecidas pelo profissional, uma vivência dura aproximadamente uma hora. Confirme a duração ao agendar."],
   ["O que é Energy Healing®?", "Segundo o material fornecido, a técnica foi criada em 2004 por Brent Phillips e propõe trabalhar crenças e conteúdos do subconsciente. Converse sobre seus métodos e limites; não substitui cuidados médicos ou psicológicos indicados."],
@@ -146,7 +146,7 @@ function Index() {
           <div className="hero-copy">
             <h1>Herbsten <em>Rozamato Sousa</em></h1>
             <p className="hero-title">Psicanalista Clínico · Practitioner em PNL · Hipnoterapeuta · Energy Healing®</p>
-            <p className="hero-statement">Um espaço para compreender sua história, observar suas crenças e abrir espaço para novas escolhas.</p>
+            <p className="hero-statement">Conheça sua história com mais profundidade e explore os padrões que influenciam suas escolhas, seus relacionamentos e a maneira como você se percebe.</p>
             <p className="hero-lead">Atendimento online e presencial em Fortaleza — CE, com abordagens voltadas ao autoconhecimento e à compreensão de padrões emocionais.</p>
             <div className="hero-credentials"><span><ShieldCheck size={17}/> Formação pelo IAPB em 2018</span><span><Monitor size={17}/> Presencial e online</span></div>
             <div className="hero-actions">
@@ -175,7 +175,7 @@ function Index() {
           <div className="section-heading center">
             <span className="eyebrow">QUESTÕES TRABALHADAS</span>
             <h2>O que está acontecendo com você <em>merece ser compreendido.</em></h2>
-            <p>Temas que podem ser explorados de acordo com sua história, sua necessidade e os limites de cada abordagem.</p>
+            <p>As questões são conversadas de forma individual, considerando o momento de vida, as expectativas e a abordagem escolhida.</p>
           </div>
           <div className="issue-window"><div className="issue-track">
             {[0, 1].map(copy => <div className="conveyor-group" aria-hidden={copy === 1 ? true : undefined} key={copy}>
@@ -276,7 +276,7 @@ function Index() {
           <span className="eyebrow">SUAS CRENÇAS E SUA REALIDADE</span>
           <h2>Perceber padrões é um convite a <em>novas perspectivas.</em></h2>
           <p>Experiências de vida, aprendizados e crenças podem influenciar decisões, hábitos e relacionamentos. Observar como esses padrões aparecem no cotidiano pode ajudar a ampliar o autoconhecimento e a considerar outras formas de agir.</p>
-          <p>Não existe uma única explicação para todo sofrimento. Cada história merece ser compreendida individualmente, sem promessas de mudanças instantâneas ou resultados garantidos.</p>
+          <p>Cada pessoa tem uma história própria. Por isso, o atendimento deve respeitar a individualidade e evitar fórmulas prontas ou promessas de transformação instantânea.</p>
           <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de conversar sobre autoconhecimento e atendimento.")}>Conversar com Herbsten <MessageCircle size={18}/></Button>
         </div>
       </section>
@@ -314,7 +314,7 @@ function Index() {
 
       <section className="section method-section">
         <div className="container">
-          <div className="section-heading center"><span className="eyebrow">UM PROCESSO DE REFLEXÃO</span><h2>Compreender padrões pode abrir espaço para <em>novas perspectivas.</em></h2><p>As abordagens e seus resultados variam. Converse sobre objetivos, métodos e limites antes de iniciar qualquer atendimento.</p></div>
+          <div className="section-heading center"><span className="eyebrow">UM PROCESSO DE REFLEXÃO</span><h2>Compreender padrões pode abrir espaço para <em>novas perspectivas.</em></h2><p>Cada abordagem tem características e limites próprios. Antes de iniciar, converse sobre o método, os objetivos possíveis e suas dúvidas.</p></div>
           <div className="method-cards">
             <article><div className="method-icon"><Brain size={21}/></div><span>01</span><h3>Compreender</h3><p>Olhar para o que você sente e identificar padrões que se repetem na sua vida.</p></article>
             <article><div className="method-icon"><HeartHandshake size={21}/></div><span>02</span><h3>Acolher</h3><p>Ter um espaço seguro para falar sobre experiências difíceis com respeito à sua história.</p></article>
@@ -334,7 +334,7 @@ function Index() {
 
       <section className="section benefits">
         <div className="container">
-          <div className="section-heading center"><span className="eyebrow">SOBRE A PROPOSTA DE ATENDIMENTO</span><h2>Um espaço de conversa que respeita <em>sua individualidade.</em></h2><p>Conheça as abordagens, tire suas dúvidas e avalie com tranquilidade qual proposta faz sentido para você.</p></div>
+          <div className="section-heading center"><span className="eyebrow">SOBRE A PROPOSTA DE ATENDIMENTO</span><h2>Um espaço de conversa que respeita <em>sua individualidade.</em></h2><p>Entenda como funciona cada abordagem, esclareça suas dúvidas e escolha com tranquilidade se deseja iniciar um atendimento.</p></div>
           <div className="benefit-grid">
             {[["Escuta individualizada","Cada pessoa possui uma história, experiências e necessidades diferentes."],["Formação e abordagens","Psicanálise pelo IAPB, Practitioner em PNL, Hipnoterapia Clínica e Energy Healing®."],["Atendimento flexível","Opções presencial e online para facilitar o acesso ao acompanhamento."],["Ambiente acolhedor","Um espaço de respeito, privacidade e cuidado durante todo o processo."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
           </div>
@@ -368,7 +368,7 @@ function Index() {
       </section>
 
       <section className="final-cta">
-        <div className="container center"><span className="eyebrow">SEU PROCESSO COMEÇA COM UMA CONVERSA</span><h2>Comece com uma conversa. <em>Conheça as possibilidades.</em></h2><p>Converse com o Herbsten, explique o que você está vivendo e descubra como funciona o atendimento.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero dar o primeiro passo e conhecer a Psicanálise e Terapias.")}>Quero conversar com o Herbsten <ArrowRight size={19}/></Button></div>
+        <div className="container center"><span className="eyebrow">SEU PROCESSO COMEÇA COM UMA CONVERSA</span><h2>Comece com uma conversa. <em>Conheça as possibilidades.</em></h2><p>Converse com o Herbsten, explique o que você está vivendo e descubra como funciona o atendimento.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero dar o primeiro passo e conhecer a Psicanálise.")}>Quero conversar com o Herbsten <ArrowRight size={19}/></Button></div>
       </section>
 
       <footer><div className="container footer-grid"><div><div className="brand footer-brand">Herbsten <span>Rozamato Sousa</span></div><p>Psicanalista Clínico · Practitioner em PNL<br/>Hipnoterapeuta · Energy Healing®</p></div><div><strong>Atendimento</strong><span>Online e presencial</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de informações sobre atendimento online e presencial.")}><MessageCircle size={16}/> WhatsApp</Button><a href="#inicio"><Instagram size={16}/> Instagram</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Herbsten Rozamato Sousa. Todos os direitos reservados.</div></footer>
