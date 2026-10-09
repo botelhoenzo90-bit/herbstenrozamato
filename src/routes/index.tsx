@@ -20,7 +20,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { clinicAddress, getClinicMapUrl } from "@/lib/clinic-location";
-import portrait from "@/assets/herbsten-retrato.png.asset.json";
+import portrait from "@/assets/idalecia-retrato.png.asset.json";
 import office from "@/assets/herbsten-consultorio.png.asset.json";
 import clinic from "@/assets/clinica-fachada.png.asset.json";
 import whatsappIcon from "@/assets/whatsapp.png.asset.json";
@@ -34,8 +34,8 @@ import insomnia from "@/assets/insonia.png.asset.json";
 import esteem from "@/assets/autoestima.png.asset.json";
 import relationships from "@/assets/relacionamentos.png.asset.json";
 import grief from "@/assets/luto.png.asset.json";
-import sharePhoto from "@/assets/herbsten-compartilhar.jpg.asset.json";
-import herbstenVideo from "@/assets/herbsten-video.mp4.asset.json";
+import sharePhoto from "@/assets/idalecia-compartilhar.jpg.asset.json";
+import herbstenVideo from "@/assets/idalecia-video.mp4.asset.json";
 
 const siteUrl = "https://herbstenrozamato.lovable.app";
 const shareUrl = new URL(sharePhoto.url, siteUrl).href;
@@ -47,7 +47,7 @@ export const Route = createFileRoute("/")({
       { title: "Herbsten Rozamato Sousa | Psicanálise e Terapias em Fortaleza, CE e online" },
       { name: "description", content: "Psicanálise e Terapias com Herbsten Rozamato Sousa em Fortaleza, CE e online. Atendimento individual para ansiedade, traumas e questões emocionais. Consulte horários." },
       { property: "og:title", content: "Herbsten Rozamato Sousa | Psicanálise e Terapias em Fortaleza, CE e online" },
-      { property: "og:description", content: "Conheça Herbsten Rozamato Sousa, Psicanalista Clínico • Hipnoterapeuta. Atendimento presencial no Centro de Fortaleza, CE e online, com escuta individualizada e acolhimento." },
+      { property: "og:description", content: "Conheça Herbsten Rozamato Sousa, Psicanalista Clínico • Hipnoterapeuta. Atendimento online e presencial em Fortaleza, CE, com escuta individualizada e acolhimento." },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { name: "google-site-verification", content: "9myn0HdI7aGpUZnVvPyhIOqrxVOLgTJA9XtYO1VNmew" },
       { property: "og:locale", content: "pt_BR" },
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/")({
             "@type": "LocalBusiness", "@id": `${siteUrl}/#atendimento`,
             name: "Herbsten Rozamato Sousa — Psicanalista Clínico • Hipnoterapeuta", url: siteUrl,
             telephone: "+55 85 98620-7574",
-            description: "Atendimento de Psicanálise e Terapias presencial em Fortaleza, CE e online.",
+            description: "Atendimento online e presencial em Fortaleza, Ceará.",
             address: {
               "@type": "PostalAddress", streetAddress: clinicAddress.street,
               addressLocality: "Fortaleza", addressRegion: "CE",
@@ -106,10 +106,10 @@ const issues = [
 const issueImages = [depression, anxiety, dependency, fears, trauma, panic, insomnia, esteem, relationships, grief];
 
 const reviews = [
-  { name: "Mariana S.", text: "Um espaço de escuta, respeito e acolhimento para falar sobre o que você sente." },
-  { name: "Camila R.", text: "Cuidado individualizado, com atenção à sua história e ao seu momento." },
-  { name: "Juliana M.", text: "Uma condução acolhedora para olhar para suas emoções com mais consciência." },
-  { name: "Ana P.", text: "Privacidade e respeito à individualidade, no atendimento presencial ou online." },
+  { name: "Depoimento real", text: "Este espaço fica reservado para inserir uma avaliação verdadeira, autorizada pelo cliente." },
+  { name: "Depoimento real", text: "Adicione aqui um relato autêntico sobre a experiência de atendimento, com autorização." },
+  { name: "Depoimento real", text: "Use este cartão para publicar uma avaliação real, sem alterar o sentido do depoimento." },
+  { name: "Depoimento real", text: "Espaço reservado para uma avaliação autorizada de quem já realizou atendimento." },
 ];
 
 const faq = [
@@ -305,9 +305,9 @@ function Index() {
         <div className="container location-grid">
           <figure className="location-map">
             {clinicMapUrl ? <iframe title="Google Maps — atendimento em Fortaleza, CE" src={clinicMapUrl} loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin"/> : <div className="location-map-pending"><MapPin size={36}/><p>Mapa temporariamente indisponível.</p></div>}
-            <figcaption>{clinicAddress.street}<br/>{clinicAddress.city}<br/>CEP: {clinicAddress.postalCode}</figcaption>
+            <figcaption>Atendimento presencial<br/>Fortaleza — CE, Brasil<br/>Endereço informado ao agendar</figcaption>
           </figure>
-          <div className="location-copy"><span className="eyebrow">ATENDIMENTO</span><h2>Presencial ou online, <em>onde fizer sentido para você.</em></h2><p>Escolha a modalidade mais adequada para sua rotina. Para atendimento presencial, entre em contato para consultar disponibilidade e horários.</p><div className="location-list"><div><MapPin size={18}/><span><strong>Presencial</strong>{clinicAddress.street}<br/>{clinicAddress.city}<br/>CEP: {clinicAddress.postalCode}</span></div><div><Video size={18}/><span><strong>Online</strong>Atendimento à distância, com praticidade e privacidade.</span></div><div><Clock3 size={18}/><span><strong>Horários</strong>Consulte diretamente com a Herbsten os horários disponíveis.</span></div></div><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de consultar horários e modalidade de atendimento.")}>Consultar horários <ArrowRight size={18}/></Button></div>
+          <div className="location-copy"><span className="eyebrow">ATENDIMENTO</span><h2>Presencial ou online, <em>onde fizer sentido para você.</em></h2><p>Escolha a modalidade mais adequada para sua rotina. Para atendimento presencial, entre em contato para consultar disponibilidade e horários.</p><div className="location-list"><div><MapPin size={18}/><span><strong>Presencial</strong>Fortaleza — CE, Brasil<br/>Consulte o endereço ao agendar.</span></div><div><Video size={18}/><span><strong>Online</strong>Atendimento à distância, com praticidade e privacidade.</span></div><div><Clock3 size={18}/><span><strong>Horários</strong>Consulte diretamente com a Herbsten os horários disponíveis.</span></div></div><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de consultar horários e modalidade de atendimento.")}>Consultar horários <ArrowRight size={18}/></Button></div>
         </div>
       </section>
 
