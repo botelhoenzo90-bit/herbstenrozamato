@@ -221,3 +221,7 @@ footer .footer-bottom{border-color:#476b56!important}
 #especialidades.section.soft,
 #experiencia.section.soft{background:#f8f7f1!important}
 
+/* Igualar o fundo das duas seções ao tom usado em ÁREAS DA VIDA */
+#especialidades.section.soft,
+#experiencia.section.soft{background:var(--background)!important}
+
