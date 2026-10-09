@@ -20,25 +20,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { clinicAddress, getClinicMapUrl } from "@/lib/clinic-location";
-import portrait from "@/assets/idalecia-retrato.png.asset.json";
-import office from "@/assets/idalecia-consultorio.png.asset.json";
-import clinic from "@/assets/clinica-fachada.png.asset.json";
 import whatsappIcon from "@/assets/whatsapp.png.asset.json";
-import depression from "@/assets/depressao.webp.asset.json";
-import anxiety from "@/assets/ansiedade.png.asset.json";
-import dependency from "@/assets/dependencia-emocional.png.asset.json";
-import fears from "@/assets/medos.png.asset.json";
-import trauma from "@/assets/traumas.png.asset.json";
-import panic from "@/assets/panico.webp.asset.json";
-import insomnia from "@/assets/insonia.png.asset.json";
-import esteem from "@/assets/autoestima.png.asset.json";
-import relationships from "@/assets/relacionamentos.png.asset.json";
-import grief from "@/assets/luto.png.asset.json";
-import sharePhoto from "@/assets/idalecia-compartilhar.jpg.asset.json";
-import herbstenVideo from "@/assets/idalecia-video.mp4.asset.json";
 
 const siteUrl = "https://herbstenrozamato.lovable.app";
-const shareUrl = new URL(sharePhoto.url, siteUrl).href;
+const shareUrl = `${siteUrl}/midia/Retrato%20acolhedor%20de%20terapeuta%20em%20consult%C3%B3rio.png`;
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
@@ -88,7 +73,11 @@ export const Route = createFileRoute("/")({
 const whatsapp = "https://wa.me/5585986207574";
 const mapsBrowserKey = import.meta.env['VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY'];
 const clinicMapUrl = getClinicMapUrl(mapsBrowserKey);
-const clinicVideoUrl = herbstenVideo.url;
+const presentationVideoUrl = "/midia/a981e190-2953-4856-8ad0-5b4c05548aa7%20%281%29.mp4";
+const approachVideoUrl = "/midia/d81da90a-ab8b-4161-909d-0640d3e7e2b1.mp4";
+const portraitUrl = "/midia/Retrato%20acolhedor%20de%20terapeuta%20em%20consult%C3%B3rio.png";
+const graduationUrl = "/midia/foto_formatura_iapb.png";
+const tijucaUrl = "/midia/foto_mercado_tijuca_alimentos.png";
 
 const issues = [
   ["Crenças limitantes", "Reconheça ideias aprendidas ao longo da vida e observe como elas podem participar das suas decisões e relações."],
@@ -145,7 +134,7 @@ function Index() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <h1>Herbsten <em>Rozamato Sousa</em></h1>
-            <p className="hero-title">Psicanalista Clínico · Practitioner em PNL · Hipnoterapeuta · Energy Healing®</p>
+            <p className="hero-title">Graduado em História · Psicanalista Clínico · Practitioner em PNL · Hipnoterapeuta Clínico · Energy Healing®</p>
             <p className="hero-statement">Conheça sua história com mais profundidade e explore os padrões que influenciam suas escolhas, seus relacionamentos e a maneira como você se percebe.</p>
             <p className="hero-lead">Atendimento online e presencial em Fortaleza — CE, com abordagens voltadas ao autoconhecimento e à compreensão de padrões emocionais.</p>
             <div className="hero-credentials"><span><ShieldCheck size={17}/> Formação pelo IAPB em 2018</span><span><Monitor size={17}/> Presencial e online</span></div>
@@ -214,7 +203,7 @@ function Index() {
             <span className="eyebrow">CONHEÇA A TRAJETÓRIA</span>
             <h2>Um pouco sobre Herbsten e <em>seu trabalho.</em></h2>
             <p>Neste carrossel, você poderá conhecer a trajetória profissional e encontrar explicações sobre o atendimento e as abordagens utilizadas.</p>
-            <p>Por enquanto, os quatro cartões ficam apenas com texto. Depois, podemos adicionar a foto profissional, o registro da formatura e os dois vídeos explicativos.</p>
+            <p>Conheça a trajetória de Herbsten, sua formação pelo Instituto de Psicanálise — IAPB e as abordagens que apresenta em seus atendimentos.</p>
             <div className="clinic-highlights">
               <div><UserRound size={18}/><span><strong>Apresentação</strong>Conheça o profissional.</span></div>
               <div><Check size={18}/><span><strong>Formação</strong>Conheça sua trajetória acadêmica.</span></div>
@@ -225,36 +214,36 @@ function Index() {
           <Carousel className="clinic-gallery" opts={{ loop: true }} aria-label="Carrossel de apresentação, formação e vídeos explicativos">
             <CarouselContent>
               <CarouselItem>
-                <article className="presentation-text-card">
+                <article className="presentation-text-card presentation-media-card">
+                  <img src={portraitUrl} alt="Retrato profissional de Herbsten Rozamato Sousa" loading="lazy"/>
                   <span className="presentation-card-number">01 / 04</span>
-                  <UserRound size={34}/>
                   <span className="eyebrow">APRESENTAÇÃO</span>
                   <h3>Conheça Herbsten</h3>
                   <p>Um pouco sobre o profissional, sua trajetória e a proposta de atendimento.</p>
                 </article>
               </CarouselItem>
               <CarouselItem>
-                <article className="presentation-text-card">
+                <article className="presentation-text-card presentation-media-card">
+                  <img src={graduationUrl} alt="Registro da formatura de Herbsten no Instituto de Psicanálise — IAPB" loading="lazy"/>
                   <span className="presentation-card-number">02 / 04</span>
-                  <Check size={34}/>
                   <span className="eyebrow">FORMAÇÃO</span>
                   <h3>Trajetória e formatura</h3>
-                  <p>Conheça a formação e o percurso profissional de Herbsten Rozamato Sousa.</p>
+                  <p>Formação em Psicanálise pelo Instituto de Psicanálise — IAPB, em 2018.</p>
                 </article>
               </CarouselItem>
               <CarouselItem>
-                <article className="presentation-text-card">
+                <article className="presentation-text-card presentation-video-card">
+                  <video controls preload="metadata" playsInline src={presentationVideoUrl} aria-label="Vídeo de apresentação de Herbsten"/>
                   <span className="presentation-card-number">03 / 04</span>
-                  <Video size={34}/>
                   <span className="eyebrow">VÍDEO EXPLICATIVO 1</span>
                   <h3>Como funciona o atendimento</h3>
-                  <p>Um vídeo para explicar o primeiro contato e as etapas do atendimento.</p>
+                  <p>Conheça a proposta de atendimento e saiba como fazer o primeiro contato.</p>
                 </article>
               </CarouselItem>
               <CarouselItem>
-                <article className="presentation-text-card">
+                <article className="presentation-text-card presentation-video-card">
+                  <video controls preload="metadata" playsInline src={approachVideoUrl} aria-label="Vídeo sobre as abordagens de atendimento"/>
                   <span className="presentation-card-number">04 / 04</span>
-                  <Video size={34}/>
                   <span className="eyebrow">VÍDEO EXPLICATIVO 2</span>
                   <h3>Conheça as abordagens</h3>
                   <p>Uma apresentação sobre as abordagens utilizadas e suas características.</p>
@@ -277,18 +266,9 @@ function Index() {
             <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de conhecer melhor o seu atendimento.")}>Quero conhecer as abordagens <ArrowRight size={18}/></Button>
           </div>
           <div className="video-frame">
-            {clinicVideoUrl ? (
-              <video controls preload="metadata" playsInline src={clinicVideoUrl}>
-                <source src={clinicVideoUrl} />
-                Seu navegador não consegue reproduzir este vídeo.
-              </video>
-            ) : (
-              <div className="video-placeholder">
-                <div className="video-play"><Video size={30}/></div>
-                <strong>Seu vídeo será exibido aqui</strong>
-                <span>Espaço reservado para o vídeo do Herbsten falando sobre o trabalho e as abordagens.</span>
-              </div>
-            )}
+            <video controls preload="metadata" playsInline src={presentationVideoUrl}>
+              Seu navegador não consegue reproduzir este vídeo.
+            </video>
           </div>
         </div>
       </section>
@@ -296,8 +276,8 @@ function Index() {
       <section className="section soft" id="energy-healing">
         <div className="container specialty-grid">
           <div><span className="eyebrow">ENTENDA A ABORDAGEM</span><h2>O que é <em>Energy Healing®?</em></h2>
-          <p>De acordo com o material apresentado por Herbsten, Energy Healing® foi criada em 2004 por Brent Phillips e é descrita como uma abordagem direcionada ao subconsciente, que utiliza cinesiologia aplicada e processos associados à psicologia energética.</p>
-          <p>Uma vivência parte de uma situação que a pessoa deseja compreender ou modificar e tem duração aproximada de uma hora, conforme as informações fornecidas pelo profissional.</p>
+          <p>Segundo o material apresentado, Energy Healing® foi criada em 2004 pelo norte-americano Brent Phillips. É descrita como uma abordagem direcionada ao subconsciente, que utiliza cinesiologia aplicada e processos associados à neurociência, à psicologia energética e à física quântica.</p>
+          <p>A vivência parte de uma situação que a pessoa deseja compreender, trabalhar ou modificar e dura aproximadamente uma hora, conforme as informações fornecidas pelo profissional.</p>
           <p className="note">As descrições desta técnica não representam garantia de resultado nem substituem diagnóstico, tratamento médico ou acompanhamento psicológico quando necessários.</p>
           <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero entender como funciona uma vivência de Energy Healing®.")}>Tirar dúvidas sobre Energy Healing® <ArrowRight size={18}/></Button></div>
           <div className="specialty-quote"><Sparkles size={32}/><p>“Suas crenças influenciam a forma como você interpreta experiências e possibilidades.”</p></div>
@@ -314,11 +294,21 @@ function Index() {
         </div>
       </section>
 
+      <section className="section" id="vivencia">
+        <div className="container narrow center">
+          <span className="eyebrow">O QUE PODE SER TRABALHADO</span>
+          <h2>Uma vivência começa com uma situação que você deseja <em>compreender ou modificar.</em></h2>
+          <p>Ansiedade, medo, pânico, fobias, desânimo, tristeza, bloqueios emocionais, experiências traumáticas, insegurança, timidez, procrastinação, compulsão alimentar, dores crônicas, questões físicas e preocupações com escassez financeira podem ser temas trazidos para conversa, conforme o escopo do atendimento.</p>
+          <p>Esses temas não significam diagnóstico nem promessa de eliminação dos sintomas. Dores crônicas, sintomas físicos, depressão e outras condições de saúde devem ser avaliadas por profissionais de saúde habilitados. A vivência de Energy Healing® não substitui tratamento médico ou psicológico.</p>
+          <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero tirar dúvidas sobre uma vivência de Energy Healing® e sua duração.")}>Consultar sobre uma vivência de aproximadamente 1h <MessageCircle size={18}/></Button></div>
+        </div>
+      </section>
+
       <section className="section benefits" id="abordagens">
         <div className="container">
           <div className="section-heading center"><span className="eyebrow">ABORDAGENS PROFISSIONAIS</span><h2>Diferentes caminhos para <em>conhecer o trabalho.</em></h2><p>Entenda as principais áreas de atuação e converse com o profissional sobre objetivos, indicações e limites de cada abordagem.</p></div>
           <div className="benefit-grid">
-            {[["Psicanálise clínica","Espaço de investigação da história pessoal, dos conflitos, dos sentimentos e dos padrões que se repetem."],["Hipnoterapia clínica","Abordagem que utiliza técnicas de hipnose em contexto terapêutico. Converse sobre formação, método e adequação ao seu caso."],["Programação Neurolinguística (PNL)","Conjunto de modelos e práticas ligados à comunicação, aos objetivos e aos padrões de comportamento."],["Energy Healing®","Prática descrita pelo profissional como direcionada a crenças e conteúdos do subconsciente. Conheça os limites e expectativas realistas."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
+            {[["Psicanálise clínica","Espaço de investigação da história pessoal, dos conflitos, dos sentimentos e dos padrões que se repetem."],["Hipnoterapia clínica","A hipnoterapia utiliza técnicas de hipnose em contexto terapêutico. Converse sobre o método, a formação e a adequação ao seu caso."],["Programação Neurolinguística (PNL)","PNL significa Programação Neurolinguística. O material apresentado a relaciona à linguagem, aos padrões de pensamento e comportamento, comunicação, gestão do estresse e definição de metas."],["Energy Healing®","Prática descrita pelo profissional como direcionada a crenças e conteúdos do subconsciente. Conheça os limites e expectativas realistas."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
           </div>
         </div>
       </section>
@@ -326,14 +316,14 @@ function Index() {
       <section className="section intro-section">
         <div className="container narrow center">
           <span className="eyebrow">ÁREAS DA VIDA</span><h2>Questões pessoais, familiares e profissionais podem se <em>conectar.</em></h2>
-          <p>O trabalho pode abrir conversas sobre relações familiares, desafios no trabalho, hábitos, autoestima, objetivos pessoais, prosperidade e sentido de vida — sempre respeitando a individualidade e sem prometer resultados específicos.</p>
+          <p>O trabalho pode abrir conversas sobre saúde familiar, relações no trabalho, prosperidade, hábitos de emagrecimento, crescimento espiritual, autoestima, objetivos pessoais e sentido de vida — sempre respeitando a individualidade e sem prometer resultados específicos.</p>
           <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de saber qual abordagem pode ser adequada para minha necessidade.")}>Conversar sobre meu objetivo <MessageCircle size={18}/></Button></div>
         </div>
       </section>
 
       <section className="section about" id="sobre">
         <div className="container about-grid">
-          <figure className="about-image"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=90" alt="Retrato profissional ilustrativo; substituir pela foto real de Herbsten" loading="lazy"/></figure>
+          <figure className="about-image"><img src={portraitUrl} alt="Retrato profissional de Herbsten Rozamato Sousa" loading="lazy"/></figure>
           <div className="about-copy">
             <span className="eyebrow">QUEM É HERBSTEN ROZAMATO SOUSA</span>
             <h2>Formação, experiência e um olhar voltado ao <em>autoconhecimento.</em></h2>
@@ -341,6 +331,20 @@ function Index() {
             <p>Sua apresentação profissional reúne diferentes abordagens e busca oferecer espaço para refletir sobre sentimentos, crenças, experiências e padrões pessoais.</p>
             <div className="about-points"><div><Check size={17}/> Graduado em História</div><div><Check size={17}/> Psicanálise pelo IAPB (2018)</div><div><Check size={17}/> Practitioner em PNL, Hipnoterapia e Energy Healing®</div></div>
             <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de informações sobre os atendimentos.")}>Agendar conversa <MessageCircle size={18}/></Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="section soft" id="experiencia">
+        <div className="container about-grid">
+          <figure className="about-image experience-image"><img src={tijucaUrl} alt="Registro relacionado à experiência de atendimento na comunidade próxima à Tijuca Alimentos" loading="lazy"/></figure>
+          <div className="about-copy">
+            <span className="eyebrow">TRAJETÓRIA E EXPERIÊNCIA</span>
+            <h2>Experiência construída em diferentes <em>contextos de atendimento.</em></h2>
+            <p>Herbsten relata ter realizado durante um ano atendimentos psicanalíticos junto à comunidade próxima à indústria Tijuca Alimentos, em Jangurussu, Fortaleza.</p>
+            <p>Também informa experiências de atendimento particular no Studio Pilates MoveOnMatPilates, na Clínica Halasana Terapias Integrativas e no Espaço Estar de terapias integrativas.</p>
+            <p>A imagem apresentada nesta seção é um registro relacionado à Tijuca Alimentos; não representa endosso ou vínculo institucional atual.</p>
+            <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de saber mais sobre sua trajetória e os atendimentos.")}>Conhecer os atendimentos <MessageCircle size={18}/></Button>
           </div>
         </div>
       </section>
