@@ -185,3 +185,18 @@ footer .footer-bottom{border-color:#476b56!important}
 
 /* Aviso visível para os exemplos fictícios da seção de avaliações */
 .reviews-disclaimer{max-width:720px;margin:18px auto 28px;text-align:center;font-size:12px;line-height:1.65;color:var(--muted-foreground)}
+
+/* Seção ASSISTA TAMBÉM: conteúdo empilhado e centralizado também no desktop */
+.process-video-block{display:flex;flex-direction:column;align-items:center;gap:22px;width:100%;max-width:900px;margin:44px auto 0;padding:0;text-align:center}
+.process-video-copy{width:100%;max-width:680px;margin:0 auto;text-align:center}
+.process-video-copy .eyebrow{display:block;text-align:center}
+.process-video-copy h3,.process-video-copy p{text-align:center}
+.process-video-frame{width:min(100%,680px);margin:0 auto}
+.process-video-frame video{width:100%;height:auto;max-height:520px;aspect-ratio:auto;object-fit:contain}
+.process-video-block>.center.action{width:100%;display:flex;justify-content:center;margin:0}
+@media(max-width:760px){
+  .process-video-block{gap:18px;margin-top:30px;padding:0}
+  .process-video-frame{width:100%}
+  .process-video-frame video{max-height:none}
+}
+
