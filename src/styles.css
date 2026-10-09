@@ -157,3 +157,14 @@ footer .footer-bottom{border-color:#476b56!important}
 .hero-brand-logo{width:min(100%,330px);max-height:150px;margin:0 auto 26px}
 .footer-brand-logo{width:min(100%,250px);max-height:125px;margin:0 0 18px}
 @media(max-width:700px){.hero-brand-logo{width:min(82%,280px);max-height:125px;margin-bottom:22px}.footer-brand-logo{width:min(78%,220px);max-height:110px}}
+
+
+/* Carrossel de questões: cards somente com texto */
+.issue-card{display:flex;flex-direction:column}
+.issue-image{display:none!important}
+
+/* Vídeos sem moldura, fundo ou caixa decorativa; preservar proporção original */
+.trajectory-video-frame,.process-video-frame{overflow:visible;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+.trajectory-video-frame video,.process-video-frame video{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;background:transparent!important;border:0;border-radius:0;box-shadow:none}
+.process-video-block{border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;padding:0}
+@media(max-width:760px){.trajectory-video-frame video{aspect-ratio:auto;max-height:none}}
