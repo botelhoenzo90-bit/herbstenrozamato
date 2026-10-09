@@ -47,7 +47,7 @@ export const Route = createFileRoute("/")({
       { title: "Herbsten Rozamato Sousa | Psicanálise e Terapias em Fortaleza, CE e online" },
       { name: "description", content: "Psicanálise e Terapias com Herbsten Rozamato Sousa em Fortaleza, CE e online. Atendimento individual para ansiedade, traumas e questões emocionais. Consulte horários." },
       { property: "og:title", content: "Herbsten Rozamato Sousa | Psicanálise e Terapias em Fortaleza, CE e online" },
-      { property: "og:description", content: "Conheça Herbsten Rozamato Sousa, Psicanalista Clínico • Hipnoterapeuta. Atendimento online e presencial em Fortaleza, CE, com escuta individualizada e acolhimento." },
+      { property: "og:description", content: "Conheço Herbsten Rozamato Sousa, Psicanalista Clínico • Hipnoterapeuta. Atendimento online e presencial em Fortaleza, CE, com escuta individualizada e acolhimento." },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { name: "google-site-verification", content: "9myn0HdI7aGpUZnVvPyhIOqrxVOLgTJA9XtYO1VNmew" },
       { property: "og:locale", content: "pt_BR" },
@@ -103,7 +103,18 @@ const issues = [
   ["Prosperidade e objetivos", "Reflita sobre crenças, expectativas e padrões que influenciam suas escolhas."],
 ];
 
-const issueImages = [depression, anxiety, dependency, fears, trauma, panic, insomnia, esteem, relationships, grief];
+const issueImages = [
+  {url:"https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=720&q=85"},
+  {url:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=720&q=85"},
+  {url:"https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=720&q=85"},
+  {url:"https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=720&q=85"},
+  {url:"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=720&q=85"},
+  {url:"https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=720&q=85"},
+  {url:"https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=720&q=85"},
+  {url:"https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=720&q=85"},
+  {url:"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=720&q=85"},
+  {url:"https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=720&q=85"}
+];
 
 const reviews = [
   { name: "Depoimento real", text: "Este espaço fica reservado para inserir uma avaliação verdadeira, autorizada pelo cliente." },
@@ -113,7 +124,7 @@ const reviews = [
 ];
 
 const faq = [
-  ["O que é a Psicanálise e Terapias?", "A TRG é uma abordagem terapêutica voltada ao trabalho com experiências e padrões emocionais. O processo é individualizado e considera a história de cada pessoa."],
+  ["O que é a Psicanálise e Terapias?", "A psicanálise busca compreender sentimentos, conflitos e padrões a partir da história singular de cada pessoa. A abordagem e os objetivos devem ser conversados diretamente com o profissional."],
   ["O atendimento pode ser online?", "Sim. Há atendimento online e presencial em Fortaleza, Ceará. Consulte disponibilidade e horários pelo WhatsApp."],
   ["Quanto tempo dura uma vivência de Energy Healing®?", "Conforme as informações fornecidas pelo profissional, uma vivência dura aproximadamente uma hora. Confirme a duração ao agendar."],
   ["O que é Energy Healing®?", "Segundo o material fornecido, a técnica foi criada em 2004 por Brent Phillips e propõe trabalhar crenças e conteúdos do subconsciente. Converse sobre seus métodos e limites; não substitui cuidados médicos ou psicológicos indicados."],
@@ -133,13 +144,13 @@ function Index() {
       <section className="hero" id="inicio">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <h1>Herbsten <em>da Guia</em></h1>
-            <p className="hero-title">Psicanalista Clínico • Hipnoterapeuta</p>
+            <h1>Herbsten <em>Rozamato Sousa</em></h1>
+            <p className="hero-title">Psicanalista Clínico · Practitioner em PNL · Hipnoterapeuta · Energy Healing®</p>
             <p className="hero-statement">Um espaço para compreender sua história, observar suas crenças e abrir espaço para novas escolhas.</p>
             <p className="hero-lead">Atendimento online e presencial em Fortaleza — CE, com abordagens voltadas ao autoconhecimento e à compreensão de padrões emocionais.</p>
             <div className="hero-credentials"><span><ShieldCheck size={17}/> Formação pelo IAPB em 2018</span><span><Monitor size={17}/> Presencial e online</span></div>
             <div className="hero-actions">
-              <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero agendar uma conversa sobre a Psicanálise e Terapias.")}><MessageCircle/> Agendar uma conversa</Button>
+              <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero agendar uma conversa sobre Psicanálise e as abordagens.")}><MessageCircle/> Agendar uma conversa</Button>
               <Button variant="siteGhost" size="site" asChild><a href="#processo">Conhecer o processo <ArrowRight/></a></Button>
             </div>
           </div>
@@ -187,7 +198,7 @@ function Index() {
           </div>
           <div className="steps">
             {[
-              ["01","Primeiro contato","Você conversa com a Herbsten, apresenta o que está vivendo e tira suas primeiras dúvidas."],
+              ["01","Primeiro contato","Você conversa com Herbsten, apresenta o que está vivendo e tira suas primeiras dúvidas."],
               ["02","Entendimento","O momento atual e suas principais questões são compreendidos de forma individualizada."],
               ["03","Processo terapêutico","As sessões seguem uma condução estruturada, respeitando seu ritmo e suas necessidades."],
               ["04","Novos caminhos","O objetivo é ampliar consciência e construir formas mais saudáveis de lidar com suas experiências."]
@@ -214,8 +225,8 @@ function Index() {
           </div>
           <Carousel className="clinic-gallery" opts={{ loop: true }} aria-label="Fotos do espaço de atendimento">
             <CarouselContent>
-              <CarouselItem><figure className="clinic-slide"><img src={office.url} alt="Herbsten em seu espaço de atendimento" loading="lazy"/></figure></CarouselItem>
-              <CarouselItem><figure className="clinic-slide"><img src={clinic.url} alt="Espaço de atendimento" loading="lazy"/></figure></CarouselItem>
+              <CarouselItem><figure className="clinic-slide"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=90" alt="Ambiente profissional acolhedor" loading="lazy"/></figure></CarouselItem>
+              <CarouselItem><figure className="clinic-slide"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=90" alt="Ambiente tranquilo e elegante" loading="lazy"/></figure></CarouselItem>
             </CarouselContent>
             <CarouselPrevious variant="siteGold" className="clinic-arrow clinic-arrow-prev" aria-label="Foto anterior" title="Foto anterior"/>
             <CarouselNext variant="siteGold" className="clinic-arrow clinic-arrow-next" aria-label="Próxima foto" title="Próxima foto"/>
@@ -227,10 +238,10 @@ function Index() {
       <section className="section video-section" id="video">
         <div className="container video-section-grid">
           <div className="video-copy">
-            <span className="eyebrow">CONHEÇA A IDALÉCIA</span>
+            <span className="eyebrow">CONHEÇA O HERBSTEN</span>
             <h2>Conheça a proposta de atendimento e <em>as abordagens.</em></h2>
-            <p>Este espaço poderá receber um vídeo de apresentação do profissional e explicações sobre as abordagens e modalidades de atendimento.</p>
-            <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de conhecer melhor o seu atendimento.")}>Quero conhecer o atendimento <ArrowRight size={18}/></Button>
+            <p>Assista à apresentação do profissional e conheça as abordagens, a formação e as modalidades de atendimento.</p>
+            <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de conhecer melhor o seu atendimento.")}>Quero conhecer as abordagens <ArrowRight size={18}/></Button>
           </div>
           <div className="video-frame">
             {clinicVideoUrl ? (
@@ -242,20 +253,58 @@ function Index() {
               <div className="video-placeholder">
                 <div className="video-play"><Video size={30}/></div>
                 <strong>Seu vídeo será exibido aqui</strong>
-                <span>Espaço reservado para o vídeo da Herbsten falando sobre a clínica e o atendimento.</span>
+                <span>Espaço reservado para o vídeo do Herbsten falando sobre o trabalho e as abordagens.</span>
               </div>
             )}
           </div>
         </div>
       </section>
 
+      <section className="section soft" id="energy-healing">
+        <div className="container specialty-grid">
+          <div><span className="eyebrow">ENTENDA A ABORDAGEM</span><h2>O que é <em>Energy Healing®?</em></h2>
+          <p>De acordo com o material apresentado por Herbsten, Energy Healing® foi criada em 2004 por Brent Phillips e é descrita como uma abordagem direcionada ao subconsciente, que utiliza cinesiologia aplicada e processos associados à psicologia energética.</p>
+          <p>Uma vivência parte de uma situação que a pessoa deseja compreender ou modificar e tem duração aproximada de uma hora, conforme as informações fornecidas pelo profissional.</p>
+          <p className="note">As descrições desta técnica não representam garantia de resultado nem substituem diagnóstico, tratamento médico ou acompanhamento psicológico quando necessários.</p>
+          <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero entender como funciona uma vivência de Energy Healing®.")}>Tirar dúvidas sobre Energy Healing® <ArrowRight size={18}/></Button></div>
+          <div className="specialty-quote"><Sparkles size={32}/><p>“Suas crenças influenciam a forma como você interpreta experiências e possibilidades.”</p></div>
+        </div>
+      </section>
+
+      <section className="section" id="crencas">
+        <div className="container narrow center">
+          <span className="eyebrow">SUAS CRENÇAS E SUA REALIDADE</span>
+          <h2>Perceber padrões é um convite a <em>novas perspectivas.</em></h2>
+          <p>Experiências de vida, aprendizados e crenças podem influenciar decisões, hábitos e relacionamentos. Observar como esses padrões aparecem no cotidiano pode ajudar a ampliar o autoconhecimento e a considerar outras formas de agir.</p>
+          <p>Não existe uma única explicação para todo sofrimento. Cada história merece ser compreendida individualmente, sem promessas de mudanças instantâneas ou resultados garantidos.</p>
+          <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de conversar sobre autoconhecimento e atendimento.")}>Conversar com Herbsten <MessageCircle size={18}/></Button>
+        </div>
+      </section>
+
+      <section className="section benefits" id="abordagens">
+        <div className="container">
+          <div className="section-heading center"><span className="eyebrow">ABORDAGENS PROFISSIONAIS</span><h2>Diferentes caminhos para <em>conhecer o trabalho.</em></h2><p>Entenda as principais áreas de atuação e converse com o profissional sobre objetivos, indicações e limites de cada abordagem.</p></div>
+          <div className="benefit-grid">
+            {[["Psicanálise clínica","Espaço de investigação da história pessoal, dos conflitos, dos sentimentos e dos padrões que se repetem."],["Hipnoterapia clínica","Abordagem que utiliza técnicas de hipnose em contexto terapêutico. Converse sobre formação, método e adequação ao seu caso."],["Programação Neurolinguística (PNL)","Conjunto de modelos e práticas ligados à comunicação, aos objetivos e aos padrões de comportamento."],["Energy Healing®","Prática descrita pelo profissional como direcionada a crenças e conteúdos do subconsciente. Conheça os limites e expectativas realistas."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="section intro-section">
+        <div className="container narrow center">
+          <span className="eyebrow">ÁREAS DA VIDA</span><h2>Questões pessoais, familiares e profissionais podem se <em>conectar.</em></h2>
+          <p>O trabalho pode abrir conversas sobre relações familiares, desafios no trabalho, hábitos, autoestima, objetivos pessoais, prosperidade e sentido de vida — sempre respeitando a individualidade e sem prometer resultados específicos.</p>
+          <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de saber qual abordagem pode ser adequada para minha necessidade.")}>Conversar sobre meu objetivo <MessageCircle size={18}/></Button></div>
+        </div>
+      </section>
+
       <section className="section about" id="sobre">
         <div className="container about-grid">
-          <figure className="about-image"><img src={portrait.url} alt="Retrato profissional de Herbsten Rozamato Sousa" loading="lazy"/></figure>
+          <figure className="about-image"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=90" alt="Retrato profissional ilustrativo; substituir pela foto real de Herbsten" loading="lazy"/></figure>
           <div className="about-copy">
-            <span className="eyebrow">SOBRE IDALÉCIA DA GUIA</span>
+            <span className="eyebrow">QUEM É HERBSTEN ROZAMATO SOUSA</span>
             <h2>Formação, experiência e um olhar voltado ao <em>autoconhecimento.</em></h2>
-            <p>Herbsten Rozamato Sousa é Psicanalista Clínico • Hipnoterapeuta, com especialização complementar em PNL e Hipnoterapia Clínica e certificação internacional em transtornos emocionais graves.</p>
+            <p>Herbsten Rozamato Sousa é graduado em História e concluiu sua formação em Psicanálise pelo Instituto de Psicanálise — IAPB, em 2018. Também atua como Practitioner em PNL, hipnoterapeuta clínico e terapeuta de tratamento físico e emocional e Energy Healing®.</p>
             <p>Sua apresentação profissional reúne diferentes abordagens e busca oferecer espaço para refletir sobre sentimentos, crenças, experiências e padrões pessoais.</p>
             <div className="about-points"><div><Check size={17}/> Graduado em História</div><div><Check size={17}/> Psicanálise pelo IAPB (2018)</div><div><Check size={17}/> Practitioner em PNL, Hipnoterapia e Energy Healing®</div></div>
             <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de informações sobre os atendimentos.")}>Agendar conversa <MessageCircle size={18}/></Button>
@@ -285,9 +334,9 @@ function Index() {
 
       <section className="section benefits">
         <div className="container">
-          <div className="section-heading center"><span className="eyebrow">POR QUE ESCOLHER A IDALÉCIA</span><h2>Um espaço de conversa que respeita <em>sua individualidade.</em></h2><p>Conheça as abordagens, tire suas dúvidas e avalie com tranquilidade qual proposta faz sentido para você.</p></div>
+          <div className="section-heading center"><span className="eyebrow">SOBRE A PROPOSTA DE ATENDIMENTO</span><h2>Um espaço de conversa que respeita <em>sua individualidade.</em></h2><p>Conheça as abordagens, tire suas dúvidas e avalie com tranquilidade qual proposta faz sentido para você.</p></div>
           <div className="benefit-grid">
-            {[["Escuta individualizada","Cada pessoa possui uma história, experiências e necessidades diferentes."],["Formação e abordagens","Psicanálise e Terapias, PNL e Hipnoterapia Clínica e certificação internacional."],["Atendimento flexível","Opções presencial e online para facilitar o acesso ao acompanhamento."],["Ambiente acolhedor","Um espaço de respeito, privacidade e cuidado durante todo o processo."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
+            {[["Escuta individualizada","Cada pessoa possui uma história, experiências e necessidades diferentes."],["Formação e abordagens","Psicanálise pelo IAPB, Practitioner em PNL, Hipnoterapia Clínica e Energy Healing®."],["Atendimento flexível","Opções presencial e online para facilitar o acesso ao acompanhamento."],["Ambiente acolhedor","Um espaço de respeito, privacidade e cuidado durante todo o processo."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
           </div>
           <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero agendar um atendimento com você.")}>Agendar meu atendimento <MessageCircle size={18}/></Button></div>
         </div>
@@ -307,24 +356,24 @@ function Index() {
             {clinicMapUrl ? <iframe title="Google Maps — atendimento em Fortaleza, CE" src={clinicMapUrl} loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin"/> : <div className="location-map-pending"><MapPin size={36}/><p>Mapa temporariamente indisponível.</p></div>}
             <figcaption>Atendimento presencial<br/>Fortaleza — CE, Brasil<br/>Endereço informado ao agendar</figcaption>
           </figure>
-          <div className="location-copy"><span className="eyebrow">ATENDIMENTO</span><h2>Presencial ou online, <em>onde fizer sentido para você.</em></h2><p>Escolha a modalidade mais adequada para sua rotina. Para atendimento presencial, entre em contato para consultar disponibilidade e horários.</p><div className="location-list"><div><MapPin size={18}/><span><strong>Presencial</strong>Fortaleza — CE, Brasil<br/>Consulte o endereço ao agendar.</span></div><div><Video size={18}/><span><strong>Online</strong>Atendimento à distância, com praticidade e privacidade.</span></div><div><Clock3 size={18}/><span><strong>Horários</strong>Consulte diretamente com a Herbsten os horários disponíveis.</span></div></div><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de consultar horários e modalidade de atendimento.")}>Consultar horários <ArrowRight size={18}/></Button></div>
+          <div className="location-copy"><span className="eyebrow">ATENDIMENTO</span><h2>Presencial ou online, <em>onde fizer sentido para você.</em></h2><p>Escolha a modalidade mais adequada para sua rotina. Para atendimento presencial, entre em contato para consultar disponibilidade e horários.</p><div className="location-list"><div><MapPin size={18}/><span><strong>Presencial</strong>Fortaleza — CE, Brasil<br/>Consulte o endereço ao agendar.</span></div><div><Video size={18}/><span><strong>Online</strong>Atendimento à distância, com praticidade e privacidade.</span></div><div><Clock3 size={18}/><span><strong>Horários</strong>Consulte diretamente com o Herbsten os horários disponíveis.</span></div></div><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de consultar horários e modalidade de atendimento.")}>Consultar horários <ArrowRight size={18}/></Button></div>
         </div>
       </section>
 
       <section className="section faq" id="faq">
         <div className="container faq-grid">
-          <div className="faq-intro"><span className="eyebrow">PERGUNTAS FREQUENTES</span><h2>Informação clara para você <em>decidir com tranquilidade.</em></h2><p>Se ainda não encontrou a resposta que procura, fale diretamente com a Herbsten.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Tenho uma dúvida sobre a terapia.")}>Tirar uma dúvida <MessageCircle size={18}/></Button></div>
+          <div className="faq-intro"><span className="eyebrow">PERGUNTAS FREQUENTES</span><h2>Informação clara para você <em>decidir com tranquilidade.</em></h2><p>Se ainda não encontrou a resposta que procura, fale diretamente com o Herbsten.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Tenho uma dúvida sobre a terapia.")}>Tirar uma dúvida <MessageCircle size={18}/></Button></div>
           <div className="faq-list">{faq.map(([q,a],i)=><div className={`faq-item ${openFaq===i ? "open":""}`} key={q}><Button variant="sitePlain" size="site" aria-expanded={openFaq===i} onClick={() => setOpenFaq(openFaq===i ? null : i)}><span>{q}</span><ChevronDown size={18}/></Button>{openFaq===i && <p>{a}</p>}</div>)}</div>
         </div>
       </section>
 
       <section className="final-cta">
-        <div className="container center"><span className="eyebrow">SEU PROCESSO COMEÇA COM UMA CONVERSA</span><h2>Comece com uma conversa. <em>Conheça as possibilidades.</em></h2><p>Converse com a Herbsten, explique o que você está vivendo e descubra como funciona o atendimento.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero dar o primeiro passo e conhecer a Psicanálise e Terapias.")}>Quero conversar com a Herbsten <ArrowRight size={19}/></Button></div>
+        <div className="container center"><span className="eyebrow">SEU PROCESSO COMEÇA COM UMA CONVERSA</span><h2>Comece com uma conversa. <em>Conheça as possibilidades.</em></h2><p>Converse com o Herbsten, explique o que você está vivendo e descubra como funciona o atendimento.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero dar o primeiro passo e conhecer a Psicanálise e Terapias.")}>Quero conversar com o Herbsten <ArrowRight size={19}/></Button></div>
       </section>
 
-      <footer><div className="container footer-grid"><div><div className="brand footer-brand">Herbsten <span>da Guia</span></div><p>Psicanalista Clínico • Hipnoterapeuta<br/>PNL e Hipnoterapia Clínica</p></div><div><strong>Atendimento</strong><span>Online e presencial</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de informações sobre atendimento online e presencial.")}><MessageCircle size={16}/> WhatsApp</Button><a href="#inicio"><Instagram size={16}/> Instagram</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Herbsten Rozamato Sousa. Todos os direitos reservados.</div></footer>
+      <footer><div className="container footer-grid"><div><div className="brand footer-brand">Herbsten <span>Rozamato Sousa</span></div><p>Psicanalista Clínico · Practitioner em PNL<br/>Hipnoterapeuta · Energy Healing®</p></div><div><strong>Atendimento</strong><span>Online e presencial</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de informações sobre atendimento online e presencial.")}><MessageCircle size={16}/> WhatsApp</Button><a href="#inicio"><Instagram size={16}/> Instagram</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Herbsten Rozamato Sousa. Todos os direitos reservados.</div></footer>
 
-      <Button variant="whatsapp" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de saber mais sobre a Psicanálise e Terapias.")} aria-label="Falar no WhatsApp"><img src={whatsappIcon.url} alt=""/></Button>
+      <Button variant="whatsapp" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de saber mais sobre Psicanálise e as abordagens.")} aria-label="Falar no WhatsApp"><img src={whatsappIcon.url} alt=""/></Button>
     </main>
   );
 }
