@@ -21,9 +21,10 @@ import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { clinicAddress, getClinicMapUrl } from "@/lib/clinic-location";
 import whatsappIcon from "@/assets/whatsapp.png.asset.json";
+import shareLogo from "@/assets/rozamato-compartilhamento.jpg.asset.json";
 
 const siteUrl = "https://herbstenrozamato.lovable.app";
-const shareUrl = `${siteUrl}/midia/Retrato%20acolhedor%20de%20terapeuta%20em%20consult%C3%B3rio.png`;
+const shareUrl = new URL(shareLogo.url, siteUrl).href;
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
@@ -42,7 +43,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: shareUrl },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Herbsten Rozamato Sousa, Psicanalista Clínico • Hipnoterapeuta" },
+      { property: "og:image:alt", content: "Logomarca Rozamato Psicanalista" },
       { name: "twitter:image", content: shareUrl },
     ],
     links: [{ rel: "canonical", href: siteUrl }],
