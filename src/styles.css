@@ -200,3 +200,15 @@ footer .footer-bottom{border-color:#476b56!important}
   .process-video-frame video{max-height:none}
 }
 
+/* Vídeos do site: mesmo padrão, sem moldura quadrada e com cantos arredondados */
+.trajectory-video-frame,.process-video-frame{overflow:hidden!important;border:0!important;border-radius:18px!important;background:transparent!important;box-shadow:none!important}
+.trajectory-video-frame video,.process-video-frame video{display:block;width:100%;height:auto;max-height:520px;aspect-ratio:auto;object-fit:contain;background:transparent!important;border:0!important;border-radius:18px!important;box-shadow:none!important}
+.process-video-frame{width:min(100%,680px);margin:0 auto}
+.trajectory-video-frame{width:min(100%,780px);margin:32px auto 0}
+@media(max-width:760px){
+  .trajectory-video-frame,.process-video-frame{border-radius:14px!important}
+  .trajectory-video-frame video,.process-video-frame video{border-radius:14px!important;max-height:none}
+  .trajectory-video-frame{width:min(100%,560px)}
+  .process-video-frame{width:100%}
+}
+
