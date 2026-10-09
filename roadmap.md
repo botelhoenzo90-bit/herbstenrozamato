@@ -1,0 +1,17 @@
+## Ajustes solicitados
+- [x] Clarear os fundos em bege, diferenciar Conhecer o processo, corrigir setas laterais e conferir SEO na prévia e no site publicado.
+- [x] Configurar e verificar SEO local, metadados, dados estruturados e sitemap na prévia.
+- [ ] Concluir verificação do Google Search Console e enviar sitemap — SEO e sitemap já publicados; falta uma propriedade verificada do site no Search Console.
+- [x] Aplicar o dourado sem pulsação nos botões e remover a comparação da segunda seção.
+- [x] Colocar fotos da Idalécia, clínica e WhatsApp.
+- [x] Adicionar as imagens disponíveis ao carrossel; manter os demais itens sem fotos até o envio.
+- [x] Ajustar início, dor e solução, avaliações, localização e espaçamentos.
+- [x] Verificar carregamento, alinhamento e navegação.
+- [x] Clarear início e ampliar/acelerar questões sem números.
+- [x] Reunir fotos do atendimento em Um espaço para você.
+- [x] Criar avaliações demonstrativas com estrelas e avatar neutro em esteira.
+- [x] Inserir Google Maps com localização provisória identificada no centro de São Paulo.
+- [x] Adicionar botões nas seções de solução e benefícios; contato verificado.
+- [x] Ajustar identificação dos perfis fictícios sem apresentá-los como pacientes reais.
+- [x] Atualizar endereço e Google Maps para Praça João Pessoa, nº 151 - Centro, Rio Tinto - PB, CEP: 58297-000.
+- [ ] Confirmar carregamento do mapa no site publicado — Google bloqueia a origem localhost usada na verificação.
