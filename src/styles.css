@@ -139,3 +139,14 @@ footer .footer-bottom{border-color:#476b56!important}
 .presentation-media-card>img{width:100%;height:230px;object-fit:contain;object-position:center;border-radius:16px;background:rgba(255,255,255,.55);padding:8px}
 .presentation-video-card>video{width:100%;height:230px;object-fit:contain;background:#13271d;border-radius:16px}
 @media(max-width:700px){.presentation-text-card{min-height:460px;padding:34px 22px}.presentation-text-card h3{font-size:28px}.presentation-text-card p{font-size:13px}.presentation-media-card>img,.presentation-video-card>video{height:190px}}
+
+
+/* Vídeos das seções de trajetória e funcionamento */
+.trajectory-video-frame{width:min(100%,980px);margin:32px auto 0;overflow:hidden;border-radius:24px;background:#13271d;box-shadow:var(--shadow-card);border:1px solid var(--border)}
+.trajectory-video-frame video{display:block;width:100%;max-height:650px;aspect-ratio:16/9;object-fit:contain;background:#13271d}
+.process-video-block{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:32px;align-items:center;margin:44px auto 0;padding:28px;border:1px solid var(--border);border-radius:24px;background:var(--paper);box-shadow:var(--shadow-card)}
+.process-video-copy h3{margin:10px 0 12px;font-size:clamp(23px,2.5vw,32px);line-height:1.2;color:var(--primary)}
+.process-video-copy p{margin:0;line-height:1.8;color:var(--muted-foreground)}
+.process-video-frame{overflow:hidden;border-radius:16px;background:#13271d}
+.process-video-frame video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#13271d}
+@media(max-width:760px){.process-video-block{grid-template-columns:1fr;gap:20px;margin-top:30px;padding:18px}.trajectory-video-frame{border-radius:16px;margin-top:22px}.trajectory-video-frame video{aspect-ratio:9/16;max-height:70vh}}
