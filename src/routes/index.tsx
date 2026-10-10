@@ -74,8 +74,8 @@ export const Route = createFileRoute("/")({
 const whatsapp = "https://wa.me/5585986207574";
 const mapsBrowserKey = import.meta.env['VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY'];
 const clinicMapUrl = getClinicMapUrl(mapsBrowserKey);
-const presentationVideoUrl = "/midia/a981e190-2953-4856-8ad0-5b4c05548aa7%20(1).mp4";
-const approachVideoUrl = "/midia/d81da90a-ab8b-4161-909d-0640d3e7e2b1.mp4";
+const presentationVideoUrl = "/midia/a981e190-2953-4856-8ad0-5b4c05548aa7%20(1).mp4?v=2";
+const approachVideoUrl = "/midia/d81da90a-ab8b-4161-909d-0640d3e7e2b1.mp4?v=2";
 const portraitUrl = "/midia/Retrato%20acolhedor%20de%20terapeuta%20em%20consult%C3%B3rio.png";
 const graduationUrl = "/midia/foto_formatura_iapb.png";
 const tijucaUrl = "/midia/foto_mercado_tijuca_alimentos.png";
@@ -204,7 +204,7 @@ function Index() {
               <p>Um vídeo ilustrativo para acompanhar a explicação sobre o funcionamento do processo e a relação entre pensamentos e emoções.</p>
             </div>
             <div className="process-video-frame">
-              <video controls preload="metadata" playsInline aria-label="Vídeo ilustrativo dos dois cérebros conversando">
+              <video controls preload="auto" playsInline webkit-playsinline="true" aria-label="Vídeo ilustrativo dos dois cérebros conversando">
                 <source src={presentationVideoUrl} type="video/mp4" />
                 Seu navegador não consegue reproduzir este vídeo.
               </video>
@@ -221,7 +221,7 @@ function Index() {
             <p>Assista ao vídeo em que Herbsten apresenta seu trabalho e compartilha sua proposta de atendimento.</p>
           </div>
           <div className="trajectory-video-frame">
-            <video controls preload="metadata" playsInline aria-label="Herbsten apresenta seu trabalho">
+            <video controls preload="auto" playsInline webkit-playsinline="true" aria-label="Herbsten apresenta seu trabalho">
               <source src={approachVideoUrl} type="video/mp4" />
               Seu navegador não consegue reproduzir este vídeo.
             </video>
