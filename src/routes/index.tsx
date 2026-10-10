@@ -74,7 +74,7 @@ export const Route = createFileRoute("/")({
 const whatsapp = "https://wa.me/5585986207574";
 const mapsBrowserKey = import.meta.env['VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY'];
 const clinicMapUrl = getClinicMapUrl(mapsBrowserKey);
-const presentationVideoUrl = "/midia/a981e190-2953-4856-8ad0-5b4c05548aa7%20%281%29.mp4";
+const presentationVideoUrl = "/midia/a981e190-2953-4856-8ad0-5b4c05548aa7%20(1).mp4";
 const approachVideoUrl = "/midia/d81da90a-ab8b-4161-909d-0640d3e7e2b1.mp4";
 const portraitUrl = "/midia/Retrato%20acolhedor%20de%20terapeuta%20em%20consult%C3%B3rio.png";
 const graduationUrl = "/midia/foto_formatura_iapb.png";
@@ -204,7 +204,8 @@ function Index() {
               <p>Um vídeo ilustrativo para acompanhar a explicação sobre o funcionamento do processo e a relação entre pensamentos e emoções.</p>
             </div>
             <div className="process-video-frame">
-              <video controls preload="metadata" playsInline src={presentationVideoUrl} aria-label="Vídeo ilustrativo dos dois cérebros conversando">
+              <video controls preload="metadata" playsInline aria-label="Vídeo ilustrativo dos dois cérebros conversando">
+                <source src={presentationVideoUrl} type="video/mp4" />
                 Seu navegador não consegue reproduzir este vídeo.
               </video>
             </div>
@@ -220,7 +221,8 @@ function Index() {
             <p>Assista ao vídeo em que Herbsten apresenta seu trabalho e compartilha sua proposta de atendimento.</p>
           </div>
           <div className="trajectory-video-frame">
-            <video controls preload="metadata" playsInline src={approachVideoUrl + "#t=1"} aria-label="Herbsten apresenta seu trabalho">
+            <video controls preload="metadata" playsInline aria-label="Herbsten apresenta seu trabalho">
+              <source src={approachVideoUrl} type="video/mp4" />
               Seu navegador não consegue reproduzir este vídeo.
             </video>
           </div>
@@ -253,7 +255,7 @@ function Index() {
         <div className="container">
           <div className="section-heading center"><span className="eyebrow">ABORDAGENS PROFISSIONAIS</span><h2>Diferentes caminhos para <em>conhecer o trabalho.</em></h2><p>Entenda as principais áreas de atuação e converse com o profissional sobre objetivos, indicações e limites de cada abordagem.</p></div>
           <div className="benefit-grid">
-            {[["Psicanálise clínica","Espaço de investigação da história pessoal, dos conflitos, dos sentimentos e dos padrões que se repetem."],["Hipnoterapia clínica","A hipnoterapia utiliza técnicas de hipnose em contexto terapêutico. Converse sobre o método, a formação e a adequação ao seu caso."],["Programação Neurolinguística (PNL)","PNL significa Programação Neurolinguística. O material apresentado a relaciona à linguagem, aos padrões de pensamento e comportamento, comunicação, gestão do estresse e definição de metas."],["Energy Healing®","Prática descrita pelo profissional como direcionada a crenças e conteúdos do subconsciente. Conheça os limites e expectativas realistas."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
+            {[[ "Psicanálise clínica","Espaço de investigação da história pessoal, dos conflitos, dos sentimentos e dos padrões que se repetem."],[ "Hipnoterapia clínica","A hipnoterapia utiliza técnicas de hipnose em contexto terapêutico. Converse sobre o método, a formação e a adequação ao seu caso."],[ "Programação Neurolinguística (PNL)","PNL significa Programação Neurolinguística. O material apresentado a relaciona à linguagem, aos padrões de pensamento e comportamento, comunicação, gestão do estresse e definição de metas."],[ "Energy Healing®","Prática descrita pelo profissional como direcionada a crenças e conteúdos do subconsciente. Conheça os limites e expectativas realistas."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
           </div>
           <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Gostaria de conversar sobre as abordagens profissionais e tirar algumas dúvidas.")}>Tirar dúvidas sobre as abordagens <MessageCircle size={18}/></Button></div>
         </div>
@@ -319,7 +321,7 @@ function Index() {
         <div className="container">
           <div className="section-heading center"><span className="eyebrow">SOBRE A PROPOSTA DE ATENDIMENTO</span><h2>Um espaço de conversa que respeita <em>sua individualidade.</em></h2><p>Entenda como funciona cada abordagem, esclareça suas dúvidas e escolha com tranquilidade se deseja iniciar um atendimento.</p></div>
           <div className="benefit-grid">
-            {[["Escuta individualizada","Cada pessoa possui uma história, experiências e necessidades diferentes."],["Formação e abordagens","Psicanálise pelo IAPB, Practitioner em PNL, Hipnoterapia Clínica e Energy Healing®."],["Atendimento flexível","Opções presencial e online para facilitar o acesso ao acompanhamento."],["Ambiente acolhedor","Um espaço de respeito, privacidade e cuidado durante todo o processo."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
+            {[[ "Escuta individualizada","Cada pessoa possui uma história, experiências e necessidades diferentes."],[ "Formação e abordagens","Psicanálise pelo IAPB, Practitioner em PNL, Hipnoterapia Clínica e Energy Healing®."],[ "Atendimento flexível","Opções presencial e online para facilitar o acesso ao acompanhamento."],[ "Ambiente acolhedor","Um espaço de respeito, privacidade e cuidado durante todo o processo."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
           </div>
           <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Herbsten! Quero agendar um atendimento com você.")}>Agendar meu atendimento <MessageCircle size={18}/></Button></div>
         </div>
