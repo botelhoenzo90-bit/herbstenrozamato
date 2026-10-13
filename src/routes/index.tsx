@@ -94,16 +94,16 @@ const issues = [
 ];
 
 const issueImages = [
-  {url:"https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=720&q=85"},
-  {url:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=720&q=85"},
-  {url:"https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=720&q=85"},
-  {url:"https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=720&q=85"},
-  {url:"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=720&q=85"},
-  {url:"https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=720&q=85"},
-  {url:"https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=720&q=85"},
-  {url:"https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=720&q=85"},
-  {url:"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=720&q=85"},
-  {url:"https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=720&q=85"}
+  { url: "/midia/Imagem%20do%20ChatGPT%2013%20de%20out.%20de%202026%2C%2015_58_43.png", alt: "Crenças limitantes" },
+  { url: "/midia/Mulher%20pensativa%20no%20sof%C3%A1%20aconchegante.png", alt: "Ansiedade e preocupações" },
+  { url: "/midia/Hesita%C3%A7%C3%A3o%20%C3%A0%20Porta%20em%20Luz%20e%20Sombra.png", alt: "Medos e fobias" },
+  { url: "/midia/Reflexos%20de%20uma%20Melancolia%20Silenciosa.png", alt: "Bloqueios emocionais" },
+  { url: "/midia/Retrato%20de%20Mem%C3%B3rias%20Dolorosas.png", alt: "Traumas e experiências marcantes" },
+  { url: "/midia/Reflex%C3%A3o%20de%20Inseguran%C3%A7a%20Diante%20do%20Espelho.png", alt: "Autoestima e insegurança" },
+  { url: "/midia/Pausa%20para%20um%20Caf%C3%A9%20no%20Home%20Office.png", alt: "Procrastinação" },
+  { url: "/midia/Dist%C3%A2ncia%20silenciosa%20na%20sala%20de%20estar.png", alt: "Relacionamentos" },
+  { url: "/midia/Lanche%20Noturno%20e%20Dilemas%20Doces.png", alt: "Compulsão alimentar" },
+  { url: "/midia/Sonhos%20e%20planos%20ao%20alcance%20m%C3%A3os.png", alt: "Prosperidade e objetivos" },
 ];
 
 const reviews = [
@@ -171,7 +171,7 @@ function Index() {
           <div className="issue-window"><div className="issue-track">
             {[0, 1].map(copy => <div className="conveyor-group" aria-hidden={copy === 1 ? true : undefined} key={copy}>
               {issues.map(([title,text], i) => <article className="issue-card" key={title}>
-                
+                <img className="issue-image" src={issueImages[i].url} alt={issueImages[i].alt} loading="lazy" />
                 <div className="issue-body"><h3>{title}</h3><p>{text}</p></div>
               </article>)}
             </div>)}
