@@ -161,8 +161,6 @@ footer .footer-bottom{border-color:#476b56!important}
 
 /* Carrossel de questões: cards somente com texto */
 .issue-card{display:flex;flex-direction:column}
-.issue-image{display:none!important}
-
 /* Vídeos sem moldura, fundo ou caixa decorativa; preservar proporção original */
 .trajectory-video-frame,.process-video-frame{overflow:visible;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
 .trajectory-video-frame video,.process-video-frame video{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;background:transparent!important;border:0;border-radius:0;box-shadow:none}
